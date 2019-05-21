@@ -16,6 +16,3 @@ resolvers += Resolver.bintrayIvyRepo("com.eed3si9n", "sbt-plugins")
 
 libraryDependencies += "org.apache.spark" %% "spark-core" % "2.4.0" % "provided"
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.0" % "provided"
-libraryDependencies += "org.apache.hadoop" % "hadoop-aws" % "2.8.5" % "provided"
-libraryDependencies += "com.amazonaws" % "aws-java-sdk" % "1.11.552" % "provided"
-
