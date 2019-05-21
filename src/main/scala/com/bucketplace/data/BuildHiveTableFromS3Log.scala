@@ -5,8 +5,6 @@ import java.time.format.DateTimeFormatter
 import org.apache.spark.sql.functions
 
 object BuildHiveTableFromS3Log extends BuildHiveTableFromS3Trait {
-    val LOG_DATABASE: String = "log_test"
-
     def main(args: Array[String]): Unit = {
         val s3DumpPathPrefix = args(0)
         val s3HivePathPrefix = args(1)

@@ -1,8 +1,6 @@
 package com.bucketplace.data
 
 object BuildHiveTableFromS3DumpTable extends BuildHiveTableFromS3Trait {
-    val DUMP_DATABASE: String = "dump_test"
-
     def main(args: Array[String]): Unit = {
         val s3DumpPathPrefix = args(0)
         val s3HivePathPrefix = args(1)
