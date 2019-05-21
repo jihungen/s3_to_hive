@@ -4,9 +4,9 @@ object BuildHiveTableFromS3DumpTable extends BuildHiveTableFromS3Trait {
     val DUMP_DATABASE: String = "dump_test"
 
     def main(args: Array[String]): Unit = {
-        val hiveDB = args(0)
-        val s3DumpPathPrefix = args(1)
-        val s3HivePathPrefix = args(2)
+        val s3DumpPathPrefix = args(0)
+        val s3HivePathPrefix = args(1)
+        val hiveDB = args(2)
         val tableName = args(3)
         val yesterday = args(4)
 

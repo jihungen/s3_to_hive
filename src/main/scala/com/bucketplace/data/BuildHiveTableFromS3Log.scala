@@ -8,9 +8,9 @@ object BuildHiveTableFromS3Log extends BuildHiveTableFromS3Trait {
     val LOG_DATABASE: String = "log_test"
 
     def main(args: Array[String]): Unit = {
-        val hiveDB = args(0)
-        val s3DumpPathPrefix = args(1)
-        val s3HivePathPrefix = args(2)
+        val s3DumpPathPrefix = args(0)
+        val s3HivePathPrefix = args(1)
+        val hiveDB = args(2)
         val tableName = args(3)
         val yesterday = args(4)
 
