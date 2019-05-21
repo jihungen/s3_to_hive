@@ -40,6 +40,6 @@ object BuildHiveTableFromS3Log extends BuildHiveTableFromS3Trait {
                 .write
                 .option("path", s3HiveTablePath)
                 .partitionBy("year", "month", "day")
-                .saveAsTable(s"${LOG_DATABASE}.${tableName}")
+                .saveAsTable(s"${hiveDB}.${tableName}")
   }
 }
