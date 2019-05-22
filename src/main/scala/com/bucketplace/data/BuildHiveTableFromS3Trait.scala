@@ -13,12 +13,6 @@ trait BuildHiveTableFromS3Trait {
                 "com.amazonaws.glue.catalog.metastore.AWSGlueDataCatalogHiveClientFactory"
             ).enableHiveSupport
             .getOrCreate
-
-    def buildS3DumpPath(s3DumpPathPrefix: String, tableName: String, date: String): String =
-        S3_PREFIX + s3DumpPathPrefix + "/dt=" + date + "/" + tableName + ".json"
-
-    def buildS3DumpPath(s3DumpPath: String, date: String): String =
-        S3_PREFIX + s3DumpPath + "/dt=" + date
         
     def buildS3HiveTablePath(s3HivePathPrefix: String, dbName: String, tableName: String): String =
         S3_PREFIX + s3HivePathPrefix + "/" + dbName + "/" + tableName
